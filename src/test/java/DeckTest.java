@@ -30,4 +30,24 @@ public class DeckTest {
     assertEquals("King of Diamonds", kingOfDiamonds.name());
   }
 
+  @Test
+  public void shuffle_deckShufflesCorrectly_randomCard() {
+    Deck myDeck = new Deck();
+    Card staticCard = myDeck.getCards().get(0);
+    myDeck.shuffle();
+    Card randomCard = myDeck.getCards().get(0);
+    assertEquals(true, staticCard != randomCard);
+  }
+
+  @Test
+  public void pullCard_checkThatCorrectCardIsPulledAndArrayShrinks_Card() {
+    Deck myDeck = new Deck();
+    Card myCard = myDeck.pullCard();
+    Deck testDeck = new Deck();
+    Card testCard = testDeck.getCards().get(0);
+    Card twoOfSpades = myDeck.getCards().get(0);
+    assertEquals(testCard.name(), myCard.name());
+    assertEquals("2 of Spades", twoOfSpades.name());
+  }
+
 }
