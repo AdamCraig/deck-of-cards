@@ -6,4 +6,12 @@ public class Card {
     mSuit = suit;
     mValue = value;
   }
+
+  public String getSuit() {
+    return mSuit;
+  }
+
+  public String getValue() {
+    return mValue;
+  }
 }
