@@ -58,4 +58,13 @@ public class DeckTest {
     assertEquals(myDeck.MAX_SIZE - 2, myDeck.howManyCardsLeft());
   }
 
+  @Test
+  public void deckEmpty_deckRunsOut_true() {
+    Deck myDeck = new Deck();
+     while (myDeck.howManyCardsLeft() > 0) {
+       myDeck.pullCard();
+     }
+     assertEquals(true, myDeck.deckEmpty());
+  }
+
 }

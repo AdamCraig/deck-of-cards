@@ -37,4 +37,8 @@ public class Deck {
     return mCards.size();
   }
 
+  public boolean deckEmpty() {
+    return mCards.size() <= 0;
+  }
+
 }
