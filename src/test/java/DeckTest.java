@@ -16,4 +16,18 @@ public class DeckTest {
     assertEquals(true, myDeck.getCards() instanceof ArrayList);
   }
 
+  @Test
+  public void getCards_cardsAreInitializedWithSuitsAndValues_AceOfSpades() {
+    Deck myDeck = new Deck();
+    Card aceOfSpades = myDeck.getCards().get(0);
+    assertEquals("Ace of Spades", aceOfSpades.name());
+  }
+
+  @Test
+  public void getCards_deckContains52UniqueCards_kingOfDiamonds() {
+    Deck myDeck = new Deck();
+    Card kingOfDiamonds = myDeck.getCards().get(51);
+    assertEquals("King of Diamonds", kingOfDiamonds.name());
+  }
+
 }
