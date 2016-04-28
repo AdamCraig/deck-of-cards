@@ -17,4 +17,10 @@ public class CardTest {
     assertEquals("Hearts", testSuit);
     assertEquals("Queen", testValue);
   }
+
+  @Test
+  public void name_returnsAFormattedNameForCard_JackOfDiamonds() {
+    Card myCard = new Card("Diamonds", "Jack");
+    assertEquals("Jack of Diamonds", myCard.name());
+  }
 }
