@@ -4,7 +4,7 @@ import java.util.Collections;
 public class Deck {
   private static final String[] SUIT = {"Spades", "Clubs", "Hearts", "Diamonds"};
   private static final String[] VALUE = {"Ace", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King"};
-  private final int MAX_SIZE = 52;
+  public static final int MAX_SIZE = 52;
 
   private ArrayList<Card> mCards;
 
@@ -31,6 +31,10 @@ public class Deck {
     Card topCard = mCards.get(0);
     mCards.remove(0);
     return topCard;
+  }
+
+  public int howManyCardsLeft() {
+    return mCards.size();
   }
 
 }

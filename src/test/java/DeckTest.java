@@ -50,4 +50,12 @@ public class DeckTest {
     assertEquals("2 of Spades", twoOfSpades.name());
   }
 
+  @Test
+  public void howManyCardsLeft_returnProperNumberOfRemainingCards_int() {
+    Deck myDeck = new Deck();
+    myDeck.pullCard();
+    myDeck.pullCard();
+    assertEquals(myDeck.MAX_SIZE - 2, myDeck.howManyCardsLeft());
+  }
+
 }
